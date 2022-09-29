@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lecture_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31P-cv-Xjs">
+                                <rect key="frame" x="62" y="405" width="103" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="ARs-h6-3eD"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="increment"/>
+                                <connections>
+                                    <action selector="increment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qw2-1o-y0E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hpr-Cn-yNO">
+                                <rect key="frame" x="218" y="407" width="110" height="65"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Decrement"/>
+                                <connections>
+                                    <action selector="decrement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fBj-Eq-eVd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbS-cz-C31">
+                                <rect key="frame" x="155" y="220" width="64" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="31P-cv-Xjs" firstAttribute="bottom" secondItem="Hpr-Cn-yNO" secondAttribute="bottom" id="2bP-Ft-fEX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="31P-cv-Xjs" secondAttribute="bottom" constant="306" id="6bM-Rf-8hN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hpr-Cn-yNO" secondAttribute="trailing" constant="47" id="7Xw-SE-zhl"/>
+                            <constraint firstItem="WbS-cz-C31" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="155" id="DCq-fm-SmA"/>
+                            <constraint firstItem="WbS-cz-C31" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="173" id="I5J-jz-bOd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WbS-cz-C31" secondAttribute="trailing" constant="156" id="Jx1-sr-Q3G"/>
+                            <constraint firstItem="31P-cv-Xjs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="358" id="ZLi-62-qqq"/>
+                            <constraint firstItem="31P-cv-Xjs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="Zu9-to-kDC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WbS-cz-C31" secondAttribute="bottom" constant="513" id="fLc-Mc-hny"/>
+                            <constraint firstItem="Hpr-Cn-yNO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="360" id="uHN-pX-Zu2"/>
+                            <constraint firstItem="Hpr-Cn-yNO" firstAttribute="leading" secondItem="31P-cv-Xjs" secondAttribute="trailing" constant="53" id="zzl-5C-0Px"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="count" destination="WbS-cz-C31" id="Vhm-0z-F70"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="2.9556650246305418"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
