@@ -17,7 +17,7 @@ struct ContentView: View {
                     Label("Roll", systemImage: "dice.fill")
                 }
             
-            scoreView(score: score)
+            scoreView(score: $score)
                 .tabItem {
                     Label("Score", systemImage: "number.square.fill")
                 }
@@ -37,7 +37,7 @@ struct rollDiceView: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: rollOutcomeView(outcome: value),
+                NavigationLink(destination: rollOutcomeView(outcome: $value),
                                isActive: $rolledDice) {EmptyView()}
                 
                 Button {
@@ -55,14 +55,14 @@ struct rollDiceView: View {
 }
 
 struct rollOutcomeView: View {
-    var outcome: Int
+    @Binding var outcome: Int
     var body: some View {
         Text("Congrats you rolled \(outcome)")
     }
 }
 
 struct scoreView: View {
-    var score: Int
+    @Binding var score: Int
     var body: some View {
         Text("Your score is \(score)")
     }
